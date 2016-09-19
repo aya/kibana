@@ -59,6 +59,10 @@ define(function (require) {
         value: 500,
         description: 'The number of rows to show in the table',
       },
+      'discover:defaultFields': {
+        value: ['_source'],
+        description: 'The document properties to show in the Discover table',
+      },
       'doc_table:highlight': {
         value: true,
         description: 'Highlight results in Discover and Saved Searches Dashboard.' +

@@ -60,7 +60,7 @@ define(function (require) {
           if (columns.length !== 0) return;
 
           var $state = getAppState();
-          $scope.columns.push('_source');
+          $scope.columns.push.apply($scope.columns, config.get('discover:defaultFields'));
           if ($state) $state.replace();
         });
 
@@ -69,7 +69,7 @@ define(function (require) {
             _.pull($scope.columns, '_source');
           }
 
-          if ($scope.columns.length === 0) $scope.columns.push('_source');
+          if ($scope.columns.length === 0) $scope.columns.push.apply($scope.columns, config.get('discover:defaultFields'));
         });
 
 

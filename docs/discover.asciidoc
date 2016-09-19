@@ -164,8 +164,9 @@ include::filter-pinning.asciidoc[]
 When you submit a search query, the 500 most recent documents that match the query are listed in the Documents table. 
 You can configure the number of documents shown in the table by setting the `discover:sampleSize` property in 
 <<advanced-options,Advanced Settings>>. By default, the table shows the localized version of the time field specified 
-in the selected index pattern and the document `_source`. You can <<adding-columns, add fields to the Documents table>> 
-from the Fields list. You can <<sorting, sort the listed documents>> by any indexed field that's included in the table.
+in the selected index pattern and the document `discover:defaultFields` properties. You can 
+<<adding-columns, add fields to the Documents table>> from the Fields list. You can
+<<sorting, sort the listed documents>> by any indexed field that's included in the table.
 
 To view a document's field data, click the *Expand* button image:images/ExpandButton.jpg[Expand Button] to the left of 
 the document's entry in the first column (the first column is usually Time). Kibana reads the document data from 
